@@ -2,7 +2,7 @@
   "name": "post",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://elatero.github.io/sdfx",
+  "homepage": "http://elatero.github.io/post_project_hack",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",

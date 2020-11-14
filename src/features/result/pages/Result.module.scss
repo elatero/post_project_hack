@@ -1,0 +1,374 @@
+@import 'assets/sass/style';
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+
+  .sideBar {
+    max-width: 230px;
+    width: 100%;
+    min-height: 500px;
+    border-right: 1px solid $color_shadow_white;
+    font-weight: normal;
+
+    .formUpload {
+      margin: 0 auto;
+      height: 110px;
+      @extend .ext_full_center;
+      border-bottom: 1px solid $color_shadow_white;
+
+      .uploadLabel {
+        height: 36px;
+        background: $color_text_blue;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 20px;
+        max-width: 190px;
+        @extend .ext_full_center;
+
+        & > span {
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 14px;
+          text-align: center;
+          color: $color_main_white;
+        }
+
+        & input[type='file'] {
+          outline: none;
+          display: none;
+          pointer-events: none;
+          user-select: none;
+        }
+      }
+    }
+
+    .wrapperCheckList {
+      padding-top: 18px;
+
+      .checkListCaption {
+        @extend .ext_full_center;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: $color_text_blue;
+        margin-bottom: 18px;
+
+        .arrowToggle {
+          margin-left: 10px;
+          cursor: pointer;
+        }
+      }
+
+      .checkList {
+        padding: 0 20px;
+
+        .checkListItem {
+          padding: 10px 0;
+          font-family: Roboto;
+          font-size: 14px;
+          line-height: 14px;
+          color: #333333;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+
+          &::after {
+            content: '';
+            background: url('../../../assets/img/arrowCheck.png');
+            width: 9px;
+            height: 7px;
+            background-repeat: no-repeat;
+            margin-left: 10px;
+            margin-bottom: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    padding: 35px 25px;
+    width: 100%;
+    font-weight: normal;
+
+    .panelDownload {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 35px;
+
+      .fileName {
+        font-size: 24px;
+        line-height: 24px;
+        color: $color_text_blue;
+        margin-right: 25px;
+      }
+      .downloadBtn,
+      .removeBtn {
+        max-width: 85px;
+        width: 100%;
+        height: 36px;
+        outline: none;
+        font-size: 14px;
+        line-height: 14px;
+        padding: 10px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .downloadBtn {
+        background: $color_text_blue;
+        border-radius: 5px;
+        color: $color_main_white;
+        margin-right: 18px;
+        border: none;
+      }
+
+      .removeBtn {
+        background: $color_main_white;
+        border: 1px solid $color_shadow_white;
+        color: $color_text_blue;
+      }
+    }
+
+    .contentWrapper {
+      display: flex;
+      justify-content: flex-start;
+
+      .boxLeft {
+        max-width: 485px;
+        width: 100%;
+
+        .processBox {
+          max-width: 485px;
+          height: 290px;
+          background: $color_main_white;
+          box-shadow: 0px 7px 4px #b4b4b4;
+          margin-bottom: 15px;
+          padding: 16px 20px;
+
+          .processTitle {
+            font-size: 18px;
+            line-height: 18px;
+            text-align: center;
+            color: #333333;
+            margin-bottom: 25px;
+
+            .blue {
+              color: $color_text_blue;
+            }
+
+            .gray {
+              color: $color_text_gray;
+            }
+          }
+
+          .processContent {
+            display: flex;
+            justify-content: space-between;
+
+            .processBoxDiagram {
+              width: 222px;
+              display: flex;
+              flex-direction: column;
+
+              .processDiagram {
+                height: 170px;
+                @extend .ext_full_center;
+                color: $color_text_blue;
+                font-size: 36px;
+                line-height: 36px;
+                text-align: center;
+                background: url('../../../assets/img/diagram.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-bottom: 20px;
+              }
+
+              .processMarks {
+                display: flex;
+                justify-content: center;
+
+                .processMark {
+                  display: flex;
+                  font-size: 14px;
+                  line-height: 14px;
+                  color: #333333;
+                  margin: 0 14px;
+
+                  .processMarkBlue,
+                  .processMarkGray {
+                    width: 11px;
+                    height: 11px;
+                    margin-right: 6px;
+                    margin-right: 6px;
+                  }
+
+                  .processMarkBlue {
+                    background: $color_text_blue;
+                  }
+
+                  .processMarkGray {
+                    background: $color_text_gray;
+                  }
+                }
+              }
+            }
+
+            .processTable {
+              padding-top: 30px;
+              padding-right: 5px;
+              text-align: right;
+
+              .processTableItem {
+                line-height: 16px;
+                color: #333333;
+                margin-bottom: 12px;
+
+                &:first-of-type {
+                  margin-bottom: 18px;
+                }
+
+                & > span {
+                  color: $color_text_blue;
+                }
+
+                .processTableItemGray {
+                  & > span {
+                    color: $color_text_gray;
+                  }
+                }
+
+                .processTableItemBlue {
+                  & > span {
+                    color: $color_text_blue;
+                  }
+                }
+
+                .processTableItemLink {
+                  color: $color_text_blue;
+                  font-size: 10px;
+                  line-height: 10px;
+                  text-decoration-line: underline;
+                  margin-top: 5px;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        .processInfo {
+          font-size: 12px;
+          line-height: 14px;
+          margin-left: 10px;
+          color: $color_text_gray;
+
+          & > span {
+            color: $color_text_blue;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .boxCenter {
+        max-width: 310px;
+        width: 100%;
+        height: 290px;
+        background: $color_main_white;
+        box-shadow: 0px 7px 4px #b4b4b4;
+        padding: 20px 0;
+        margin: 0 40px;
+
+        .tableAddressCaption {
+          font-size: 14px;
+          line-height: 16px;
+          color: #333333;
+          padding: 4px 20px 16px;
+          border-bottom: 1px solid $color_shadow_white;
+          margin-bottom: 10px;
+        }
+
+        .tableAddress {
+          text-align: left;
+          padding: 0 20px;
+
+          .tableAddressItem {
+            margin-bottom: 18px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .tableAddressCount {
+              flex-grow: 5;
+              font-size: 14px;
+              line-height: 22px;
+              color: $color_text_blue;
+              width: 50x;
+              display: block;
+            }
+
+            .tableAddressText {
+              flex-grow: 0;
+              font-size: 14px;
+              line-height: 16px;
+              color: #333333;
+              width: 210px;
+
+              & span {
+                font-size: 10px;
+                line-height: 10px;
+                text-decoration-line: underline;
+                color: $color_text_blue;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+
+        .downloadList {
+          font-size: 10px;
+          line-height: 10px;
+          text-decoration-line: underline;
+          color: $color_text_blue;
+          cursor: pointer;
+          text-align: right;
+          padding: 0 15px;
+        }
+      }
+
+      .boxRight {
+        max-width: 245px;
+        width: 100%;
+
+        .card {
+          background: $color_main_white;
+          box-shadow: 0px 7px 4px #b4b4b4;
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 25px;
+
+          .cardRequest {
+            font-size: 36px;
+            line-height: 36px;
+            color: #0055a6;
+            margin-right: 16px;
+          }
+
+          .cardText {
+            font-size: 14px;
+            line-height: 16px;
+            color: #333333;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

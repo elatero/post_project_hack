@@ -22,7 +22,9 @@ const MainLayout = (props: Props) => {
           </div>
           <nav className={styles.navigation}>
             <ul className={styles.list}>
-              <li className={styles.item}>Для бизнеса</li>
+              <li className={styles.item} onClick={() => history.push('/result')}>
+                Для бизнеса
+              </li>
               <li className={styles.item}>Помощь</li>
               <li className={styles.item}>Выйти</li>
             </ul>
